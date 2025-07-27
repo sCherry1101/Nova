@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css"/>
+    <link rel="stylesheet" href="quest.css"/>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<div id="topbar">
+    <h1 id="Nova">Nova</h1>
+    <div id="nav-links">
+        <a href="profile.html">Profile</a>
+        <a href="faq.html">FAQ</a>
+        <a href="quest.html">Quests</a>
+        <div id="ist-time">IST Time: </div>
+    </div>
+</div>
+
+<div id="main-dashboard-content">
+    <div id="timer-section">
+        <div id="Welcome"> Welcome Player! Its time to level up.</div>
+        <div id="timer">30:00</div>
+        <button id="toggle-btn">Start Timer</button>
+    </div>
+
+    <div class="quests-container-dashboard">
+        <h1>Your Quests</h1>
+
+        <div class="xp-counter">
+            Total XP: <span id="total-xp">0</span>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="new-quest-input" placeholder="Add a new quest...">
+            <input type="text" id="quest-category-input" placeholder="Category (e.g., Work, Study)">
+            <select id="quest-priority-input">
+                <option value="low">Priority: Low</option>
+                <option value="medium">Priority: Medium</option>
+                <option value="high">Priority: High</option>
+                <option value="urgent">Priority: Urgent</option>
+            </select>
+            <input type="date" id="quest-due-date-input" title="Due Date">
+            <input type="number" id="quest-reward-input" placeholder="XP Reward (e.g., 100)" min="0" value="100">
+            <button id="add-quest-btn">Add Quest</button>
+        </div>
+
+        <div class="filter-sort-area">
+            <input type="text" id="search-input" placeholder="Search quests...">
+            <select id="sort-select">
+                <option value="default">Sort By: Default</option>
+                <option value="priority-desc">Priority (High to Low)</option>
+                <option value="priority-asc">Priority (Low to High)</option>
+                <option value="dueDate-asc">Due Date (Soonest)</option>
+                <option value="dueDate-desc">Due Date (Latest)</option>
+                <option value="xp-desc">XP Reward (High to Low)</option>
+                <option value="xp-asc">XP Reward (Low to High)</option>
+                <option value="completed">Completed Status</option>
+            </select>
+        </div>
+
+        <ul id="quest-list">
+            <!-- Quests will be loaded here by JavaScript -->
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const timerDisplay = document.getElementById('timer');
+        const toggleBtn = document.getElementById('toggle-btn');
+
+        let timeLeft = 30 * 60;
+        let timerInterval;
+        let isRunning = false;
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+        }
+
+        function updateTimerDisplay() {
+            timerDisplay.textContent = formatTime(timeLeft);
+        }
+
+        function startTimer() {
+            if (isRunning) return;
+            isRunning = true;
+            toggleBtn.textContent = 'Stop Timer';
+
+            timerInterval = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateTimerDisplay();
+                } else {
+                    clearInterval(timerInterval);
+                    isRunning = false;
+                    toggleBtn.textContent = 'Start Timer';
+                    console.log("Time's up!");
+                    timerDisplay.textContent = "00:00";
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (!isRunning) return;
+            clearInterval(timerInterval);
+            isRunning = false;
+            toggleBtn.textContent = 'Start Timer';
+        }
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                if (isRunning) {
+                    stopTimer();
+                } else {
+                    startTimer();
+                }
+            });
+        } else {
+            console.error("Toggle button with ID 'toggle-btn' not found.");
+        }
+
+        updateTimerDisplay();
+
+        function updateIST() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-IN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+            const istTimeElement = document.getElementById("ist-time");
+            if (istTimeElement) {
+                istTimeElement.textContent = "Time: " + timeString;
+            } else {
+                console.error("IST Time element with ID 'ist-time' not found.");
+            }
+        }
+        setInterval(updateIST, 1000);
+        updateIST();
+    });
+</script>
+
+</body>
+</html>

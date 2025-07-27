@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css"/>
+    <title>Profile</title>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Welcome to Nova!</h1>
+        <p>Username: <span id="display-username"></span></p>
+        <p>Date: <span id="display-date"></span></p>
+        <p>Status: Active</p>
+        <a href="Dashboard.html" class="back-button">Go to Dashboard</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const displayUsernameSpan = document.getElementById('display-username');
+            const displayDateSpan = document.getElementById('display-date');
+            const savedUsername = localStorage.getItem('currentUser');
+
+            if (displayUsernameSpan) {
+                if (savedUsername) {
+                    displayUsernameSpan.textContent = savedUsername;
+                } else {
+                    displayUsernameSpan.textContent = 'Guest';
+                    console.warn('No username found in localStorage.');
+                }
+            } else {
+                console.error("Display username span not found.");
+            }
+
+            if (displayDateSpan) {
+                const today = new Date();
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                displayDateSpan.textContent = today.toLocaleDateString(undefined, options);
+            } else {
+                console.error("Display date span not found.");
+            }
+        });
+    </script>
+</body>
+</html>

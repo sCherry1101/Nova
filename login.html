@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css"/>
+    <title>Username</title>
+</head>
+<body>
+    <div class="username-container">
+        <h1>Select Your Username</h1>
+        <div class="input-button-group"> 
+            <input type="text" id="username" placeholder="Enter your username">
+            <a href="Dashboard.html" id="confirm-username-button">Confirm</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const usernameInput = document.getElementById('username');
+            const confirmButton = document.getElementById('confirm-username-button');
+
+            if (confirmButton && usernameInput) {
+                confirmButton.addEventListener('click', (event) => {
+                    const username = usernameInput.value.trim();
+                    if (username) {
+                        localStorage.setItem('currentUser', username);
+                    } else {
+                        console.warn('Username is empty. Not saving to localStorage.');
+                        
+                    }
+                });
+            } else {
+                console.error("Username input or confirm button not found.");
+            }
+        });
+    </script>
+</body>
+</html>

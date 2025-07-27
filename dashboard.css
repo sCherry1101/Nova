@@ -1,0 +1,171 @@
+* {
+    font-family: 'Orbitron', sans-serif;
+    box-sizing: border-box;
+    color: white; 
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black; 
+}
+
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; 
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#Nova {
+    margin: 0;
+    font-size: 1.8em;
+    color: #00bcd4;
+}
+
+#nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+#topbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    background-color: transparent;
+}
+
+#topbar a:hover {
+    color: #00bcd4;
+}
+
+#ist-time {
+    margin-left: 20px;
+    font-size: 0.9em;
+    color: #bbb;
+    background-color: transparent;
+}
+
+#main-dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 20px;
+    gap: 40px;
+    flex-grow: 1;
+}
+
+#timer-section {
+    text-align: center;
+    padding: 30px;
+    background-color: black; 
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 400px;
+    flex-shrink: 0;
+}
+
+#Welcome {
+    font-size: larger;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+#timer {
+    font-size: 6em;
+    margin-bottom: 30px;
+    color: #00bcd4;
+    text-shadow: 0 0 10px rgba(0,255,255,0.5);
+    background-color: transparent;
+}
+
+#toggle-btn {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+}
+
+#toggle-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#toggle-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0,123,255,0.4);
+}
+
+@media (max-width: 1024px) {
+    #main-dashboard-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #timer-section, .quests-container-dashboard {
+        width: 90%;
+        max-width: 500px;
+        margin-left: 0;
+    }
+
+    .quests-container-dashboard {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #ist-time {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #main-dashboard-content {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    #timer-section {
+        padding: 20px;
+    }
+
+    #timer {
+        font-size: 4em;
+    }
+
+    #toggle-btn {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+}

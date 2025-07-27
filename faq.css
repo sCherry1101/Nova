@@ -1,0 +1,88 @@
+* {
+    font-family: 'Orbitron', sans-serif;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    padding: 20px; 
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.5);
+    max-width: 800px; 
+    width: 100%; 
+    text-align: center;
+    margin: 20px 0; 
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #00bcd4;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
+    line-height: 1.2;
+}
+
+.faq-item {
+    background-color:black;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left; 
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2); 
+}
+
+.faq-item h3 {
+    font-size: 1.5em;
+    color: #00e0ff; 
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1.0em;
+    color: #ccc; 
+    line-height: 1.6; 
+    margin-bottom: 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 40px; 
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+}
+
+.back-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+}

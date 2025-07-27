@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Quests - Nova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quest.css">
+</head>
+<body>
+    <div class="quests-container">
+        <h1>Your Quests</h1>
+
+        <div class="xp-counter">
+            Total XP: <span id="total-xp">0</span>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="new-quest-input" placeholder="Add a new quest...">
+            <input type="text" id="quest-category-input" placeholder="Category (e.g., Work, Study)">
+            <select id="quest-priority-input">
+                <option value="low">Priority: Low</option>
+                <option value="medium">Priority: Medium</option>
+                <option value="high">Priority: High</option>
+                <option value="urgent">Priority: Urgent</option>
+            </select>
+            <input type="date" id="quest-due-date-input" title="Due Date">
+            <input type="number" id="quest-reward-input" placeholder="XP Reward (e.g., 100)" min="0" value="100">
+            <button id="add-quest-btn">Add Quest</button>
+        </div>
+
+        <div class="filter-sort-area">
+            <input type="text" id="search-input" placeholder="Search quests...">
+            <select id="sort-select">
+                <option value="default">Sort By: Default</option>
+                <option value="priority-desc">Priority (High to Low)</option>
+                <option value="priority-asc">Priority (Low to High)</option>
+                <option value="dueDate-asc">Due Date (Soonest)</option>
+                <option value="dueDate-desc">Due Date (Latest)</option>
+                <option value="xp-desc">XP Reward (High to Low)</option>
+                <option value="xp-asc">XP Reward (Low to High)</option>
+                <option value="completed">Completed Status</option>
+            </select>
+        </div>
+
+        <ul id="quest-list">
+           
+        </ul>
+
+        <a href="Dashboard.html" class="back-button">Go to Dashboard</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
