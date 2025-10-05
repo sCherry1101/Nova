@@ -5,6 +5,7 @@ body{
     background: #000000;
     color: white;
     font-weight: light;
+    cursor: url('cursor.jpeg'), auto;
 }
 
 #heading{
@@ -81,4 +82,183 @@ a{
     opacity: 0.7;
     text-shadow: 0 0 5px #6D28D9;
   }
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  letter-spacing: 2px;
+}
+
+
+h3 {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 40px;
+  color: #C4B5FD;
+  text-shadow: 0 0 15px #8B5CF6, 0 0 30px #A78BFA;
+  animation: blinkHeading 1.5s infinite ease-in-out;
+}
+
+
+.profile {
+  border-radius: 10px;
+  padding: 30px;
+  width: 80%;
+  max-width: 500px;
+  margin-top: 30px;
+  box-shadow: 0 0 20px #5B21B6;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 10px;
+  color: #C4B5FD;
+}
+
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  background-color: #000;
+ 
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 10px #8B5CF6;
+  border-color: #A78BFA;
+}
+
+
+.button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 5px 0 #5B21B6;
+  transition: all 0.1s ease-in-out;
+  animation: blinkButton 1.4s infinite ease-in-out;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #5B21B6;
+}
+
+
+@keyframes blinkButton {
+  0%, 100% {
+    box-shadow: 0 0 15px #A78BFA, 0 0 25px #C4B5FD, 0 5px 0 #5B21B6;
+    color: #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 5px #6D28D9, 0 2px 0 #4C1D95;
+    color: #C4B5FD;
+  }
+}
+
+@keyframes blinkHeading {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 15px #A78BFA, 0 0 25px #C4B5FD;
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 5px #6D28D9;
+  }
+}
+
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #2e1065, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 1s; 
+}
+
+.loading-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: #C4B5FD;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px #A78BFA, 0 0 20px #C4B5FD, 0 0 40px #8B5CF6;
+  animation: blinkLoader 1s infinite alternate;
+}
+
+
+@keyframes blinkLoader {
+  0% { opacity: 1; text-shadow: 0 0 15px #C4B5FD, 0 0 30px #8B5CF6; }
+  100% { opacity: 0.6; text-shadow: 0 0 5px #6D28D9; }
+}
+
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.navbar {
+    width: 100%;
+    background-color: #000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    
+}
+
+.nbutton{
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 5px 0 #5B21B6;
+  transition: all 0.1s ease-in-out;
+  animation: blinkButton 1.4s infinite ease-in-out;
+  cursor: pointer;
+  margin: 0 5px;
 }
