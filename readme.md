@@ -4,7 +4,7 @@
 
 ##Clone Repo 
 
-```git clone https://github.com/sCherry/Nova.git
+git clone https://github.com/sCherry/Nova.git
 
 
  ##License
