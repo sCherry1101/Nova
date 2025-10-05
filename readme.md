@@ -4,8 +4,8 @@
 
 ##Clone Repo 
 
-```git clone https://github.com/sCherry/Nova.git
- cd nova ```
+git clone https://github.com/sCherry/Nova.git
+
 
  ##License
     This project is open source under the MIT license.
