@@ -1,0 +1,84 @@
+body{
+    font-family: 'press start 2p', cursive;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: white;
+    font-weight: light;
+}
+
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #fcfcfc;
+    animation: blink 1.2s infinite;
+    letter-spacing: 4px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#enterbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 14px 28px;
+  border: 2px solid #8B5CF6;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10pxs;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 5px 0 #5B21B6;
+  transition: all 0.1s ease-in-out;
+  animation: blinkButton 1.4s infinite ease-in-out;
+}
+
+
+.button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #5B21B6;
+}
+
+
+@keyframes blinkButton {
+  0%, 100% {
+    box-shadow: 0 0 15px #A78BFA, 0 0 25px #C4B5FD, 0 5px 0 #5B21B6;
+    color: #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 5px #6D28D9, 0 2px 0 #4C1D95;
+    color: #C4B5FD;
+  }
+}
+
+@keyframes blinkHeading {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 15px #A78BFA, 0 0 25px #C4B5FD;
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 5px #6D28D9;
+  }
+}
