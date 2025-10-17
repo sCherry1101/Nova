@@ -33,6 +33,11 @@ python app.py
 # open your browser and visit:
 [text](http://127.0.0.1:5000/)
 
+## example Contributions
+-Improve the chatbot responses.
+-Add command shortcuts.
+-Design a new window or mini-app.
+-Refine the retro UI or dark mode visuals.
 
 
 ##credits
