@@ -53,7 +53,7 @@ python app.py
 
 # screenshots
 
-![Nova Screenshot](image.png)
+![Nova Screenshot](/image.png)
 
 # about
 
