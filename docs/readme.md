@@ -1,19 +1,60 @@
-#Nova v3
 
-**nova v3** is a open-source gamified prodictivity and timer tool for students who struggle with procastionation and time management. It helps in making planning and scheduling game like making it interactive.
+> A desktop-in-a-browser project made from scratch.
 
-##Clone Repo 
+---
 
-git clone https://github.com/sCherry/Nova.git
+## Overview
 
+Nova is a web-based desktop environment.  
+It combines different tools into one simple, interactive system that runs right in your browser.
 
- ##License
-    This project is open source under the MIT license.
+---
 
-##Contributing 
+## Features
 
-~Fork the repo
-~Create your branch 
-~Commit your changes 
-~Push to the branch
-~Open a pull request 
+- Chatbot — responds, chats, and learns a bit.
+- Calculator — does the math for you.
+- Notepad — type, save, and clear notes.
+- XPS — file explorer system.
+- Taskbar — switch between apps like a desktop.
+- Energy Bars — UI touch for visual feedback.
+
+---
+
+## Live Version
+
+[https://nova1101.netlify.app](https://nova1101.netlify.app)
+
+---
+
+## Tech Stack
+
+- HTML, CSS, JavaScript (Tailwind for styling)
+- Flask for backend
+- scikit-learn for chatbot logic
+- A lot of testing and debugging
+
+---
+
+## Run Locally
+
+```bash
+# clone the repository
+git clone https://github.com/scherry1101/nova.git
+
+# enter the directory
+cd nova
+
+# install dependencies
+pip install flask scikit-learn
+
+# run the app
+python app.py
+
+# screenshots
+
+![Nova Screenshot](image.png)
+
+# about
+
+Nova is made by @scherry1101
