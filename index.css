@@ -1,0 +1,37 @@
+body {
+    background-color:#000000;
+    color:#ffffff;
+    font-family:'Press Start 2p', cursive;
+}
+
+a, .button, .nbutton {
+    text-decoration: none;
+    font-size: 12px;
+    padding: 12px 28px;
+    border-radius: 5px;
+    border: 2px solid #8B5CF6;
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 5px 0 #5B21B6;
+    transition: all 0.1s ease-in-out;
+    animation: blinkButton 1.4s infinite ease-in-out;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.button:active,
+.nbutton:active,
+a:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #5B21B6;
+}
+
+#main-box{
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+
+}

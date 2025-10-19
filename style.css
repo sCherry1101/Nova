@@ -13,8 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    letter-spacing: 2px;
-    cursor: url('cursor.jpeg'), auto;
+   
 }
 
 
@@ -59,13 +58,7 @@ body {
     0%, 100% { opacity: 1; text-shadow: 0 0 15px #A78BFA, 0 0 25px #C4B5FD; }
     50% { opacity: 0.7; text-shadow: 0 0 5px #6D28D9; }
 }
- #main-box{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    
- }
+
 h3 {
     font-size: 16px;
     text-align: center;
@@ -75,7 +68,7 @@ h3 {
     animation: blinkHeading 1.5s infinite ease-in-out;
 }
 
-/* --- Buttons --- */
+
 a, .button, .nbutton {
     text-decoration: none;
     font-size: 12px;
@@ -111,7 +104,7 @@ a:active {
     }
 }
 
-/* --- Enter Button Section --- */
+
 #enterbutton {
     display: flex;
     justify-content: center;
@@ -119,7 +112,7 @@ a:active {
     margin-top: 20px;
 }
 
-/* --- Profile Form --- */
+
 .profile {
     border-radius: 10px;
     padding: 30px;
@@ -164,7 +157,6 @@ textarea:focus {
     border-color: #A78BFA;
 }
 
-/* --- Navbar --- */
 .navbar {
     width: 100%;
     background-color: #000;
@@ -176,7 +168,7 @@ textarea:focus {
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 500px) {
     #heading { font-size: 24px; }
     h3 { font-size: 14px; }

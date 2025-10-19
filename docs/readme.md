@@ -51,10 +51,5 @@ pip install flask scikit-learn
 # run the app
 python app.py
 
-# screenshots
-
-![Nova Screenshot](/image.png)
-
 # about
-
 Nova is made by @scherry1101
